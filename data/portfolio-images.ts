@@ -1,15 +1,12 @@
-// This file contains the mapping of portfolio items to their correct images
-// based on the documents provided
-
 export const fashionImages = {
   // Fashion category images
-  fashionInstallation: "/images/kate-moss-fashion.png", // The Kate Moss "is my spirit animal" fashion piece
-  streetwearCollection: "/images/fashion-4.png", // Different streetwear image
-  customFashion: "/images/fashion-2.png",
-  apparelDesign: "/images/design-1.png",
-  maskDesign: "/images/studio-2.png",
-  runwayDesigns: "/images/fashion-5.png",
-  fashionCollaboration: "/images/fashion-1.png",
+  fashionInstallation: "/images/fashion-1.png",
+  streetwearCollection: "/images/fashion-2.png",
+  customFashion: "/images/fashion-3.png",
+  apparelDesign: "/images/fashion-4.png",
+  maskDesign: "/images/fashion-5.png",
+  runwayDesigns: "/images/fashion-6.png",
+  fashionCollaboration: "/images/fashion-7.png",
 }
 
 export const artworkImages = {
@@ -50,4 +47,13 @@ export const muralImages = {
   communityProject: "/images/mural-2.png",
   galleryInstallation: "/images/mural-3.png",
   festivalArtwork: "/images/mural-4.png",
+}
+
+// Add this export at the end of the file to combine all image categories
+export const portfolioImages = {
+  ...fashionImages,
+  ...artworkImages,
+  ...eventImages,
+  ...processImages,
+  ...muralImages,
 }

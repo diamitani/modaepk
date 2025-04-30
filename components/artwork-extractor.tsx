@@ -132,6 +132,7 @@ export function ArtworkExtractor() {
         dimensions: '80" x 60"',
         description:
           'The 5th Installment of the series "How to: Be an Artist" Collection. Features four anatomical figures showing different body systems. This piece includes an ultrasound photo.',
+        imageUrl,
       }
     }
 

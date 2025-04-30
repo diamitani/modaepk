@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -9,7 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { getAllCategories, getArtworkByCategory, artworkData } from "@/data/artwork-data"
 import { enforceUniqueImages } from "@/utils/enforce-unique-images"
-import { ArtworkDisplay } from "@/components/artwork-display"
+import { ArtworkDisplayFixed } from "@/components/artwork-display-fixed"
+import { ImageWithFallback } from "@/components/image-error-handler"
 import type { ArtworkItem } from "@/utils/pdf-extractor"
 
 export default function PortfolioPage() {
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image
+              <ImageWithFallback
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uxGCLnrq9fEjNc4vHL9md8RLkLqGf8.png"
                 alt="HOW TO : LOSE YOUR F* MIND 2021"
                 fill
@@ -114,7 +114,7 @@ export default function PortfolioPage() {
                 onClick={() => setSelectedItem(artwork)}
               >
                 <div className="relative h-48 w-full">
-                  <Image
+                  <ImageWithFallback
                     src={artwork.image || "/placeholder.svg"}
                     alt={artwork.title}
                     fill
@@ -144,7 +144,7 @@ export default function PortfolioPage() {
             <TabsContent key={category} value={category}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {artworkByCategory[category]?.map((item) => (
-                  <ArtworkDisplay key={item.id} artwork={item} onClick={() => setSelectedItem(item)} />
+                  <ArtworkDisplayFixed key={item.id} artwork={item} onClick={() => setSelectedItem(item)} />
                 ))}
               </div>
             </TabsContent>
@@ -185,7 +185,7 @@ export default function PortfolioPage() {
               </DialogDescription>
             </DialogHeader>
             <div className="relative h-[60vh] w-full">
-              <Image
+              <ImageWithFallback
                 src={selectedItem.image || "/placeholder.svg"}
                 alt={selectedItem.title}
                 fill

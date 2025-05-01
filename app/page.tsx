@@ -149,6 +149,7 @@ export default function Home() {
                       alt="HOW TO LOSE YOUR F* MIND artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
+                      unoptimized
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -163,6 +164,7 @@ export default function Home() {
                       alt="HOW TO BUILD THE PERFECT WOMBMAN artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
+                      unoptimized
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -177,6 +179,7 @@ export default function Home() {
                       alt="HOW TO BE AN ARTIST artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
+                      unoptimized
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -185,26 +188,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-8 text-center flex flex-wrap justify-center gap-4">
+              <div className="mt-8 text-center">
                 <Button asChild className="rounded-full">
                   <Link
-                    href="https://drive.google.com/drive/folders/1-CN-Uf-SD2m82CXkx3ESyUz4Mk_rkNXK?usp=sharing"
+                    href="https://hallamoda.softr.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    View "How To: Be An Artist" Series
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="rounded-full">
-                  <Link
-                    href="https://drive.google.com/drive/folders/1-D7fnxTp2S08ASZORelYCowMoKdy5bhi?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center"
-                  >
-                    Explore Complete Artwork Archive
+                    View Complete Portfolio
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

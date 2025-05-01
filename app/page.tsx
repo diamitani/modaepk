@@ -1,93 +1,494 @@
-import Link from "next/link"
+"use client"
+
 import { Button } from "@/components/ui/button"
-import { Navbar } from "@/components/navbar"
-import { MasonryGallery } from "@/components/masonry-gallery"
+import { ChevronDown, ExternalLink } from "lucide-react"
+import Link from "next/link"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Timeline } from "@/components/timeline"
+import { ContactForm } from "@/components/contact-form"
+import { SocialLinks } from "@/components/social-links"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Navbar />
-
       {/* Hero Section */}
-      <section
-        className="relative h-screen flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Mr. Moda</h1>
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
-            Contemporary artist blending anime influences, street art aesthetics, and Renaissance allegories
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/portfolio">View Portfolio</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="bg-white bg-opacity-20 hover:bg-opacity-30">
-              <Link href="/gallery">Explore Gallery</Link>
-            </Button>
-          </div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 to-purple-900">
+        <div className="absolute inset-0 opacity-20">
+          <Image src="/images/artwork-1.png" alt="Mr. Moda Artwork" fill style={{ objectFit: "cover" }} priority />
         </div>
-      </section>
-
-      {/* Featured Gallery Section */}
-      <section className="py-20 bg-gray-50" id="featured">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Featured Works</h2>
-            <Button asChild variant="outline">
-              <Link href="/gallery">View All</Link>
-            </Button>
-          </div>
-
-          <MasonryGallery columns={3} className="mb-12" />
+        <div className="container relative z-10 text-center px-4">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">MR. MODA</h1>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Naïf Artist / Creative Director</p>
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full border-white text-white hover:bg-white hover:text-black transition-colors"
+            asChild
+          >
+            <Link href="#about">
+              Explore
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20" id="about">
-        <div className="container mx-auto px-4">
+      <section id="about" className="py-20 bg-white">
+        <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">About Mr. Moda</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Mr. Moda is a contemporary artist whose work blends anime influences, street art aesthetics, and
-                Renaissance allegories. His signature "How To: Be An Artist" series has gained critical acclaim for its
-                innovative approach to exploring mental health and environmental challenges.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">About the Artist</h2>
+              <p className="text-gray-700 mb-4">
+                Hassan Hakim (AKA Hallamoda, Mr. Moda) is an American multimedia artist known for his interdisciplinary
+                urban underground style. Born 1990 in Queens, NY of Jamaican/Haitian descent, Moda is a naïf
+                (self-taught) painter whose practice spans fantastical murals, NFTs, live art installations, paintings
+                on canvas, clothing, bags and shoes.
               </p>
-              <p className="text-lg text-gray-700 mb-8">
-                Each piece features authentic materials and symbolic collectables crafted from scratch, creating a
-                unique visual language that resonates with collectors and critics alike.
+              <p className="text-gray-700 mb-4">
+                His distinct style, inspired by comic books, Renaissance allegories and Pop culture has garnered him
+                attention and notoriety firstly in the New York downtown art scene.
               </p>
-              <Button asChild>
-                <Link href="/contact">Contact the Artist</Link>
-              </Button>
+              <p className="text-gray-700">
+                Mr. Moda's iconic hand painted clothing attracted the attention of wardrobe stylist Anaya Hayes who
+                featured his pieces in the 2015 Art Basel event Swizz Beats X Revolt TV. From 2018, Moda was an in-house
+                artist/designer at Faith Connexion, a specialty boutique in New York City.
+              </p>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="/images/artist-portrait.jpg"
-                alt="Mr. Moda in his studio"
-                className="absolute inset-0 w-full h-full object-cover"
+              <Image
+                src="/images/painting-1.png"
+                alt="Mr. Moda working on art"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Experience the Complete Collection</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Explore Mr. Moda's diverse portfolio spanning fine art, murals, commissions, and his acclaimed series.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" variant="outline" className="border-white hover:bg-white hover:text-black">
-              <Link href="/gallery">View Gallery</Link>
-            </Button>
-            <Button asChild size="lg">
-              <Link href="/portfolio">Explore Portfolio</Link>
-            </Button>
+      {/* Studio Process Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="container px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Studio Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/studio-1.png"
+                alt="Mr. Moda in studio"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold">Workshop Environment</h3>
+                  <p className="text-sm text-white/80">Whatever It Takes</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/studio-2.png"
+                alt="Mr. Moda with mask"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold">Artistic Identity</h3>
+                  <p className="text-sm text-white/80">Distinctive Style</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/workshop-1.png"
+                alt="Mr. Moda teaching"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold">Knowledge Sharing</h3>
+                  <p className="text-sm text-white/80">Teaching & Collaboration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-white">
+        <div className="container px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Portfolio</h2>
+
+          <Tabs defaultValue="artwork" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-12">
+              <TabsTrigger value="artwork">Artwork</TabsTrigger>
+              <TabsTrigger value="fashion">Fashion</TabsTrigger>
+              <TabsTrigger value="events">Events & Exhibitions</TabsTrigger>
+            </TabsList>
+            <TabsContent value="artwork">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/artwork-1.png"
+                      alt="Anime-inspired artwork by Mr. Moda"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">HOW TO: LOSE YOUR F* MIND</h3>
+                    <p className="text-sm text-gray-500">2018</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/artwork-2.png"
+                      alt="Sailor Moon inspired artwork by Mr. Moda"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">HOW TO: BUILD THE PERFECT WOMBMAN</h3>
+                    <p className="text-sm text-gray-500">2021</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/artwork-3.png"
+                      alt="Sailor Moon inspired artwork with model"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">HOW TO: BE AN ARTIST</h3>
+                    <p className="text-sm text-gray-500">2021</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center space-y-4">
+                <Button asChild className="rounded-full">
+                  <Link
+                    href="https://drive.google.com/drive/folders/1-CN-Uf-SD2m82CXkx3ESyUz4Mk_rkNXK?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    View "How To: Be An Artist" Series
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <div className="block w-full h-4"></div>
+                <Button asChild variant="outline" className="rounded-full">
+                  <Link
+                    href="https://drive.google.com/drive/folders/1-D7fnxTp2S08ASZORelYCowMoKdy5bhi?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    Explore Complete Artwork Archive
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </TabsContent>
+            <TabsContent value="fashion">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/fashion-1.png"
+                      alt="Fashion collaboration by Mr. Moda"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">Fashion Collaboration</h3>
+                    <p className="text-sm text-gray-500">2021</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/fashion-2.png"
+                      alt="Custom fashion pieces by Mr. Moda"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">Custom Fashion Pieces</h3>
+                    <p className="text-sm text-gray-500">2022</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/design-1.png"
+                      alt="T-shirt design by Mr. Moda"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">Apparel Design</h3>
+                    <p className="text-sm text-gray-500">2020</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <Button asChild className="rounded-full">
+                  <Link
+                    href="https://new.express.adobe.com/page/mM6Q6a5MMc3JX/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    View Fashion Lookbook
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </TabsContent>
+            <TabsContent value="events">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/gallery-1.png"
+                      alt="Mr. Moda at gallery event"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">Gallery Opening</h3>
+                    <p className="text-sm text-gray-500">2022</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image
+                      src="/images/event-2.png"
+                      alt="Mr. Moda at fashion event"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">Fashion Week Collaboration</h3>
+                    <p className="text-sm text-gray-500">2021</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative h-64 w-full">
+                    <Image src="/images/event-3.png" alt="Mr. Moda at BFA event" fill style={{ objectFit: "cover" }} />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-lg">BFA Art Basel</h3>
+                    <p className="text-sm text-gray-500">2022</p>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+
+      {/* Press Section */}
+      <section id="press" className="py-20 bg-gray-900 text-white">
+        <div className="container px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Press & Media</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/press-1.png"
+                alt="XXL Magazine featuring Dreamville"
+                fill
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Featured in Major Publications</h3>
+              <p className="text-gray-300 mb-6">
+                Mr. Moda's work has been featured in prominent publications including XXL Magazine, where his custom
+                designs for Dreamville artists gained significant attention. His unique artistic vision and fashion
+                sensibilities have made him a sought-after creative force in both the art and music industries.
+              </p>
+              <p className="text-gray-300">
+                His collaborations with musicians and fashion brands have been documented in various media outlets,
+                showcasing his ability to bridge different creative worlds through his distinctive artistic style.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Print Media</h3>
+              <p className="text-gray-300">
+                Featured in magazines including XXL, Vogue, and various art publications that have highlighted his
+                unique approach to blending fashion and fine art.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Digital Coverage</h3>
+              <p className="text-gray-300">
+                Extensive online coverage through art blogs, fashion websites, and music platforms that showcase his
+                collaborations and artistic development.
+              </p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Documentary Features</h3>
+              <p className="text-gray-300">
+                Participated in documentary projects that explore the intersection of street art, fashion, and music
+                culture in contemporary urban settings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Exhibitions & Achievements */}
+      <section id="exhibitions" className="py-20 bg-white">
+        <div className="container px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Exhibitions & Achievements</h2>
+          <Timeline />
+        </div>
+      </section>
+
+      {/* Collaborations */}
+      <section id="collaborations" className="py-20 bg-gray-100">
+        <div className="container px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Collaborations</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/collaboration-2.png"
+                alt="Mr. Moda collaboration"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h3 className="text-2xl font-bold mb-4">"Our ART brings PEOPLE together"</h3>
+              <p className="text-gray-700 mb-4">
+                Mr. Moda's collaborative approach to art brings together diverse communities and creates conversations
+                that transcend differences. His work with various artists, brands, and organizations demonstrates the
+                power of art to unite people.
+              </p>
+              <p className="text-gray-700">
+                Through adaptability and acceptance, Mr. Moda's collaborations aim to overcome barriers and achieve
+                harmony through creative expression.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Fashion Brands</h3>
+              <p className="text-gray-700 mb-4">
+                Worked with high fashion brands and designers including Chris Habana, Carolina Sarria, Faith Connexion &
+                RDNMKS to create one-of-a-kind artworks on clothing and performance pieces.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Music Industry</h3>
+              <p className="text-gray-700 mb-4">
+                Collaborated with independent organizations in the music industry, developing unique tour merchandise,
+                events and experiences with live painting and custom atelier.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Art Curation</h3>
+              <p className="text-gray-700 mb-4">
+                Assisted Maria Buccellatti in curating events, artists, and photographers during Art Basel in Miami and
+                New York. Hosted numerous pop-up events and exhibitions.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative h-40 rounded-lg overflow-hidden">
+              <Image
+                src="/images/event-4.png"
+                alt="Mr. Moda with Andrew Yang"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-40 rounded-lg overflow-hidden">
+              <Image
+                src="/images/portrait-1.png"
+                alt="Mr. Moda portrait"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-40 rounded-lg overflow-hidden">
+              <Image
+                src="/images/event-2.png"
+                alt="Mr. Moda at fashion event"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-40 rounded-lg overflow-hidden">
+              <Image
+                src="/images/event-1.png"
+                alt="Mr. Moda at Miami event"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gray-50">
+        <div className="container px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact</h2>
+              <p className="text-gray-700 mb-8">
+                For inquiries about commissions, exhibitions, or collaborations, please get in touch.
+              </p>
+              <div className="space-y-4 mb-8">
+                <p className="flex items-center text-gray-700">
+                  <span className="font-semibold mr-2">Email:</span> thefashion@hallamoda.com
+                </p>
+                <p className="flex items-center text-gray-700">
+                  <span className="font-semibold mr-2">Phone:</span> 786.843.1305
+                </p>
+                <p className="flex items-center text-gray-700">
+                  <span className="font-semibold mr-2">Address:</span> 36 NE 1st Street Suite 365, Miami, FL 33132
+                </p>
+              </div>
+              <SocialLinks />
+            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

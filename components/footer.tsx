@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Instagram, Twitter, Facebook, Linkedin } from "lucide-react"
+import { Instagram, Twitter, Facebook, Linkedin, ExternalLink } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -71,38 +71,56 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="https://drive.google.com/file/d/1vqqJZa0YUh3jqyCb1kcuW2SoAW8LQbo2/view?usp=drivesdk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Full Portfolio
+                <Link href="#press" className="text-gray-400 hover:text-white transition-colors">
+                  Press
                 </Link>
               </li>
               <li>
-                <Link href="/artwork" className="text-gray-400 hover:text-white transition-colors">
-                  Artwork Collection
-                </Link>
-              </li>
-              <li>
-                <Link href="/press" className="text-gray-400 hover:text-white transition-colors">
-                  Press & Media
-                </Link>
-              </li>
-              <li>
-                <Link href="/exhibitions" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="#exhibitions" className="text-gray-400 hover:text-white transition-colors">
                   Exhibitions
                 </Link>
               </li>
               <li>
-                <Link href="/collaborations" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="#collaborations" className="text-gray-400 hover:text-white transition-colors">
                   Collaborations
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://new.express.adobe.com/page/mM6Q6a5MMc3JX/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
+                  Fashion Lookbook
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://drive.google.com/drive/folders/1-CN-Uf-SD2m82CXkx3ESyUz4Mk_rkNXK?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
+                  "How To" Series Archive
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://drive.google.com/drive/folders/1-D7fnxTp2S08ASZORelYCowMoKdy5bhi?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
+                  Complete Artwork Archive
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </Link>
               </li>
               <li>

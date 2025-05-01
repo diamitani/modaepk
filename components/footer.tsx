@@ -125,6 +125,17 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="https://drive.google.com/drive/folders/1--zFO__5aD7NICQq37cs3BvfDhGQAZi7?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
+                  Workshop Videos
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="https://www.hallamoda.com"
                   target="_blank"
                   rel="noopener noreferrer"

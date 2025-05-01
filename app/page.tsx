@@ -13,17 +13,23 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="absolute inset-0 opacity-20">
-          <Image src="/images/artwork-1.png" alt="Mr. Moda Artwork" fill style={{ objectFit: "cover" }} priority />
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-black">
+        <div className="absolute inset-0 opacity-40">
+          <Image
+            src="/images/fashion-1.png"
+            alt="Mr. Moda Fashion Design"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
         </div>
         <div className="container relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">MR. MODA</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Naïf Artist / Creative Director</p>
           <Button
-            variant="outline"
+            variant="secondary"
             size="lg"
-            className="rounded-full border-white text-white hover:bg-white hover:text-black transition-colors"
+            className="rounded-full bg-white/90 text-black hover:bg-white border-0"
             asChild
           >
             <Link href="#about">
@@ -179,7 +185,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-8 text-center space-y-4">
+              <div className="mt-8 text-center flex flex-wrap justify-center gap-4">
                 <Button asChild className="rounded-full">
                   <Link
                     href="https://drive.google.com/drive/folders/1-CN-Uf-SD2m82CXkx3ESyUz4Mk_rkNXK?usp=sharing"
@@ -191,7 +197,6 @@ export default function Home() {
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <div className="block w-full h-4"></div>
                 <Button asChild variant="outline" className="rounded-full">
                   <Link
                     href="https://drive.google.com/drive/folders/1-D7fnxTp2S08ASZORelYCowMoKdy5bhi?usp=sharing"
@@ -247,6 +252,19 @@ export default function Home() {
                   <div className="p-4 bg-white">
                     <h3 className="font-bold text-lg">Apparel Design</h3>
                     <p className="text-sm text-gray-500">2020</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold mb-4 text-center">HIGH QUALITY MANUFACTURING</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-gray-700 mb-2">• Capable of producing 1/1 garments to short RTW capsules</p>
+                    <p className="text-gray-700 mb-2">• From basics in all printing services to specialty embroidery</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-700 mb-2">• Expert patchwork techniques and pattern making</p>
+                    <p className="text-gray-700 mb-2">• Custom design and production solutions</p>
                   </div>
                 </div>
               </div>
@@ -361,6 +379,87 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold mb-6 text-center">Press Features</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Link
+                href="https://www.artrkl.com/post/featureartist-moda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <h4 className="text-lg font-bold mb-2">ArtRKL: Featured Artist - Moda</h4>
+                <p className="text-gray-300 mb-2">
+                  An in-depth look at Mr. Moda's artistic journey and creative process.
+                </p>
+                <span className="text-blue-400 flex items-center">
+                  Read Article <ExternalLink className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                href="https://digidame.com/tag/miami/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <h4 className="text-lg font-bold mb-2">DigiDame: Miami Art Scene</h4>
+                <p className="text-gray-300 mb-2">
+                  Coverage of Mr. Moda's contributions to Miami's vibrant art community.
+                </p>
+                <span className="text-blue-400 flex items-center">
+                  Read Article <ExternalLink className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                href="https://lawire.com/younity-studios-believes-personal-success-doesnt-have-to-come-at-the-expense-of-others/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <h4 className="text-lg font-bold mb-2">LA Wire: Younity Studios Feature</h4>
+                <p className="text-gray-300 mb-2">
+                  How Younity Studios and Mr. Moda are redefining collaborative success in the art world.
+                </p>
+                <span className="text-blue-400 flex items-center">
+                  Read Article <ExternalLink className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                href="https://nyweekly.com/business/how-younity-studios-is-helping-artists-achieve-collective-success/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <h4 className="text-lg font-bold mb-2">NY Weekly: Collective Success</h4>
+                <p className="text-gray-300 mb-2">
+                  Exploring how Younity Studios is creating new opportunities for artists like Mr. Moda.
+                </p>
+                <span className="text-blue-400 flex items-center">
+                  Read Article <ExternalLink className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+
+              <Link
+                href="https://artistweekly.com/younity-studios-and-how-it-furthers-the-concept-of-art-and-fashion-as-portrayed-by-renowned-artist-hallamoda-the-fashion/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors col-span-1 md:col-span-2"
+              >
+                <h4 className="text-lg font-bold mb-2">Artist Weekly: Art & Fashion Fusion</h4>
+                <p className="text-gray-300 mb-2">
+                  A comprehensive look at how Hallamoda (Mr. Moda) is revolutionizing the intersection of art and
+                  fashion through Younity Studios.
+                </p>
+                <span className="text-blue-400 flex items-center">
+                  Read Article <ExternalLink className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -463,6 +562,19 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+        <div className="mt-12 text-center">
+          <Button asChild className="rounded-full">
+            <Link
+              href="https://drive.google.com/drive/folders/1--zFO__5aD7NICQq37cs3BvfDhGQAZi7?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              Watch Workshop Videos
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 

@@ -145,26 +145,24 @@ export default function Home() {
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative h-64 w-full">
                     <Image
-                      src="https://raw.githubusercontent.com/diamitani/modaepk/main/images/MR%20MODA%2C%20HOW%20TO%20%20LOSE%20YOUR%20FCKING%20MIND%2C%202018.jpg"
-                      alt="HOW TO LOSE YOUR F* MIND artwork by Mr. Moda"
+                      src="/images/how-to-lose-mind.jpg"
+                      alt="HOW TO: LOSE YOUR F*CKING MIND artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
-                      unoptimized
                     />
                   </div>
                   <div className="p-4 bg-white">
-                    <h3 className="font-bold text-lg">HOW TO: LOSE YOUR F* MIND</h3>
+                    <h3 className="font-bold text-lg">HOW TO: LOSE YOUR F*CKING MIND</h3>
                     <p className="text-sm text-gray-500">2018</p>
                   </div>
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative h-64 w-full">
                     <Image
-                      src="https://raw.githubusercontent.com/diamitani/modaepk/main/images/MR%20MODA%2C%20HOW%20TO%20%20BUILD%20THE%20PERFECT%20WOMBMAN%20V.1%2C%202018.jpg"
+                      src="/images/how-to-perfect-wombman.jpg"
                       alt="HOW TO BUILD THE PERFECT WOMBMAN artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
-                      unoptimized
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -175,11 +173,10 @@ export default function Home() {
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative h-64 w-full">
                     <Image
-                      src="https://raw.githubusercontent.com/diamitani/modaepk/main/images/MR%20MODA%2C%20HOW%20TO%20%20HOW%20TO%20%20BE%20AN%20ARTIST%2C%202021.jpg"
-                      alt="HOW TO BE AN ARTIST artwork by Mr. Moda"
+                      src="/images/how-to-be-artist.jpg"
+                      alt="HOW TO: BE AN ARTIST artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
-                      unoptimized
                     />
                   </div>
                   <div className="p-4 bg-white">

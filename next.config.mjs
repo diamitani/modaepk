@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['v0.blob.com', 'raw.githubusercontent.com'],
+    domains: ['v0.blob.com', 'raw.githubusercontent.com', 'github.com'],
     unoptimized: true,
   },
   eslint: {

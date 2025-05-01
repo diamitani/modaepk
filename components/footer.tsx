@@ -92,34 +92,23 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="https://hallamoda.softr.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
+                  Complete Portfolio
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="https://new.express.adobe.com/page/mM6Q6a5MMc3JX/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors flex items-center"
                 >
                   Fashion Lookbook
-                  <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://drive.google.com/drive/folders/1-CN-Uf-SD2m82CXkx3ESyUz4Mk_rkNXK?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
-                >
-                  "How To" Series Archive
-                  <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://drive.google.com/drive/folders/1-D7fnxTp2S08ASZORelYCowMoKdy5bhi?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
-                >
-                  Complete Artwork Archive
                   <ExternalLink className="ml-1 h-3 w-3" />
                 </Link>
               </li>

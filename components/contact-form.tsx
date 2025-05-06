@@ -16,16 +16,48 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const formData = new FormData(e.currentTarget)
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const subject = formData.get("subject") as string
+    const message = formData.get("message") as string
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    })
+    try {
+      // Send form data to the server
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+          recipient: "thefashion@hallamoda.com",
+        }),
+      })
 
-    setIsSubmitting(false)
-    e.currentTarget.reset()
+      if (!response.ok) {
+        throw new Error("Failed to send message")
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      })
+
+      e.currentTarget.reset()
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      })
+      console.error("Error sending message:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

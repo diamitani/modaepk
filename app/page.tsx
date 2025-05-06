@@ -318,121 +318,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services & Rates Section */}
-      <section id="services" className="py-20 bg-gray-50">
-        <div className="container px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Services & Rates</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Services Offered</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Artist Development
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Brand Development
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Clothing & Accessory Design
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Consulting
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Creative Marketing Strategies
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Event Planning
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Graphic Design
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Private Tutoring
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    R&D
-                  </p>
-                  <p className="flex items-center text-gray-700">
-                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
-                    Installation
-                  </p>
-                </div>
-              </div>
-
-              <h3 className="text-2xl font-bold mt-10 mb-6">Standard Rates</h3>
-              <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-lg mb-2">In-Studio</h4>
-                  <p className="text-gray-700">$250 + $80 per hour</p>
-                  <p className="text-gray-700">$1000 Per Day | $500 Per 1.2 Day</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-lg mb-2">Residential</h4>
-                  <p className="text-gray-700">$500 + $250 Per Day</p>
-                  <p className="text-gray-700">$150+ for high detailed work</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-lg mb-2">Garments</h4>
-                  <p className="text-gray-700">$1500 + $250 per hr</p>
-                  <p className="text-gray-700 italic">Contact Directly For Details</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-lg mb-2">Painting</h4>
-                  <p className="text-gray-700">$2000 + $1000 week</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-lg mb-2">Installation</h4>
-                  <p className="text-gray-700">$4000 + $1000 week</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/images/rate-sheet.jpg"
-                alt="Mr. Moda Services and Rate Sheet"
-                width={800}
-                height={1000}
-                className="rounded-lg"
-              />
-            </div>
-          </div>
-
-          <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4 text-center">Younity Studios Mission</h3>
-            <p className="text-gray-700 mb-4">
-              Committed to providing high quality services in the areas of art, installation, marketing, and educational
-              services. We at Younity Studios are a group of creators seeking to create innovative solutions that meet
-              the needs of the clients and often exceed their expectations.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Dedicated to staying up-to-date on the latest trends in entertainment and technologies in the industry,
-              but most importantly, we are passionate about helping clients achieve their goals in developing a sincere
-              connection with their respective audiences.
-            </p>
-            <p className="text-gray-700 mb-4 font-medium">
-              "We strive to create works that bring people together and inspire collaboration. We believe that when we
-              come together, we can achieve great things. Through Younity Studios, we hope to foster a sense of
-              community and shared purpose. Together, we can create something beautiful and meaningful."
-            </p>
-            <p className="text-gray-700 text-right font-bold">Together, We Can Do That.</p>
-          </div>
-        </div>
-      </section>
-
       {/* Press Section */}
       <section id="press" className="py-20 bg-gray-900 text-white">
         <div className="container px-4">
@@ -687,9 +572,10 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
         <div className="container px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Contact</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact</h2>
               <p className="text-gray-700 mb-8">
                 For inquiries about commissions, exhibitions, or collaborations, please get in touch.
               </p>
@@ -707,6 +593,41 @@ export default function Home() {
               <SocialLinks />
             </div>
             <ContactForm />
+          </div>
+
+          {/* Standard Rates - Now full width and below contact info and form */}
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">Standard Rates</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <h4 className="font-bold text-lg mb-2 text-primary">In-Studio</h4>
+                <p className="text-gray-700">$250 + $80 per hour</p>
+                <p className="text-gray-700">$1000 Per Day</p>
+                <p className="text-gray-700">$500 Per 1/2 Day</p>
+              </div>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <h4 className="font-bold text-lg mb-2 text-primary">Residential</h4>
+                <p className="text-gray-700">$500 + $250 Per Day</p>
+                <p className="text-gray-700">$150+ for high detailed work</p>
+              </div>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <h4 className="font-bold text-lg mb-2 text-primary">Garments</h4>
+                <p className="text-gray-700">$1500 + $250 per hr</p>
+                <p className="text-gray-700 italic">Contact For Details</p>
+              </div>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <h4 className="font-bold text-lg mb-2 text-primary">Painting</h4>
+                <p className="text-gray-700">$2000 + $1000 week</p>
+              </div>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <h4 className="font-bold text-lg mb-2 text-primary">Installation</h4>
+                <p className="text-gray-700">$4000 + $1000 week</p>
+              </div>
+            </div>
+            <div className="mt-4 text-center text-sm text-gray-500">
+              <p>* Rates may vary based on project complexity and requirements</p>
+              <p>* Contact for custom quotes and detailed pricing</p>
+            </div>
           </div>
         </div>
       </section>

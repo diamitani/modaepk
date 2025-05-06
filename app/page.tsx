@@ -25,7 +25,9 @@ export default function Home() {
         </div>
         <div className="container relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">MR. MODA</h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Naïf Artist / Creative Director</p>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Award-Winning Naïf Artist / Creative Director
+          </p>
           <Button
             variant="secondary"
             size="lg"
@@ -47,10 +49,10 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">About the Artist</h2>
               <p className="text-gray-700 mb-4">
-                Hassan Hakim (AKA Hallamoda, Mr. Moda) is an American multimedia artist known for his interdisciplinary
-                urban underground style. Born 1990 in Queens, NY of Jamaican/Haitian descent, Moda is a naïf
-                (self-taught) painter whose practice spans fantastical murals, NFTs, live art installations, paintings
-                on canvas, clothing, bags and shoes.
+                Hassan Hakim (AKA Hallamoda, Mr. Moda) is an award-winning American multimedia artist known for his
+                interdisciplinary urban underground style. Born 1990 in Queens, NY of Jamaican/Haitian descent, Moda is
+                a naïf (self-taught) painter whose practice spans fantastical murals, NFTs, live art installations,
+                paintings on canvas, clothing, bags and shoes.
               </p>
               <p className="text-gray-700 mb-4">
                 His distinct style, inspired by comic books, Renaissance allegories and Pop culture has garnered him
@@ -145,7 +147,7 @@ export default function Home() {
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative h-64 w-full">
                     <Image
-                      src="/images/how-to-lose-mind.jpg"
+                      src="/images/how-to-lose-mind-new.jpg"
                       alt="HOW TO: LOSE YOUR F*CKING MIND artwork by Mr. Moda"
                       fill
                       style={{ objectFit: "cover" }}
@@ -153,7 +155,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 bg-white">
                     <h3 className="font-bold text-lg">HOW TO: LOSE YOUR F*CKING MIND</h3>
-                    <p className="text-sm text-gray-500">2018</p>
+                    <p className="text-sm text-gray-500">2021</p>
                   </div>
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-lg">
@@ -313,6 +315,121 @@ export default function Home() {
               </div>
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      {/* Services & Rates Section */}
+      <section id="services" className="py-20 bg-gray-50">
+        <div className="container px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Services & Rates</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-6">Services Offered</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Artist Development
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Brand Development
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Clothing & Accessory Design
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Consulting
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Creative Marketing Strategies
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Event Planning
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Graphic Design
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Private Tutoring
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    R&D
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <span className="w-4 h-4 bg-primary rounded-full mr-2"></span>
+                    Installation
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mt-10 mb-6">Standard Rates</h3>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg mb-2">In-Studio</h4>
+                  <p className="text-gray-700">$250 + $80 per hour</p>
+                  <p className="text-gray-700">$1000 Per Day | $500 Per 1.2 Day</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg mb-2">Residential</h4>
+                  <p className="text-gray-700">$500 + $250 Per Day</p>
+                  <p className="text-gray-700">$150+ for high detailed work</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg mb-2">Garments</h4>
+                  <p className="text-gray-700">$1500 + $250 per hr</p>
+                  <p className="text-gray-700 italic">Contact Directly For Details</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg mb-2">Painting</h4>
+                  <p className="text-gray-700">$2000 + $1000 week</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg mb-2">Installation</h4>
+                  <p className="text-gray-700">$4000 + $1000 week</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/images/rate-sheet.jpg"
+                alt="Mr. Moda Services and Rate Sheet"
+                width={800}
+                height={1000}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-4 text-center">Younity Studios Mission</h3>
+            <p className="text-gray-700 mb-4">
+              Committed to providing high quality services in the areas of art, installation, marketing, and educational
+              services. We at Younity Studios are a group of creators seeking to create innovative solutions that meet
+              the needs of the clients and often exceed their expectations.
+            </p>
+            <p className="text-gray-700 mb-4">
+              Dedicated to staying up-to-date on the latest trends in entertainment and technologies in the industry,
+              but most importantly, we are passionate about helping clients achieve their goals in developing a sincere
+              connection with their respective audiences.
+            </p>
+            <p className="text-gray-700 mb-4 font-medium">
+              "We strive to create works that bring people together and inspire collaboration. We believe that when we
+              come together, we can achieve great things. Through Younity Studios, we hope to foster a sense of
+              community and shared purpose. Together, we can create something beautiful and meaningful."
+            </p>
+            <p className="text-gray-700 text-right font-bold">Together, We Can Do That.</p>
+          </div>
         </div>
       </section>
 

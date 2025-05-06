@@ -5,7 +5,7 @@ export function Timeline() {
     {
       year: "2024",
       events: [
-        "Solo Exhibition Brooklynade NYC",
+        "Solo Exhibition Brooklyn Made NYC",
         "CEYCAMODA Gallery Exhibition Alongside Cey Adams and Craig Anthony Miller",
       ],
     },

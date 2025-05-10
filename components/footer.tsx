@@ -52,10 +52,11 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="text-gray-400 mb-2">36 NE 1st Street Suite 365</p>
-            <p className="text-gray-400 mb-2">Miami, FL 33132</p>
+            <p className="text-gray-400 mb-2">37 Troutman St.</p>
+            <p className="text-gray-400 mb-2">New York, NY 11206</p>
             <p className="text-gray-400 mb-2">thefashion@hallamoda.com</p>
-            <p className="text-gray-400 mb-2">786.843.1305</p>
+            <p className="text-gray-400 mb-2">Business: 347.878.1754</p>
+            <p className="text-gray-400 mb-2">Cell: 929.250.6093</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Links</h3>

@@ -26,7 +26,7 @@ export default function Home() {
         <div className="container relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">MR. MODA</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Award-Winning Naïf Artist / Creative Director
+            Congressional Award Winning Naïf Artist / Creative Director
           </p>
           <Button
             variant="secondary"
@@ -584,10 +584,13 @@ export default function Home() {
                   <span className="font-semibold mr-2">Email:</span> thefashion@hallamoda.com
                 </p>
                 <p className="flex items-center text-gray-700">
-                  <span className="font-semibold mr-2">Phone:</span> 786.843.1305
+                  <span className="font-semibold mr-2">Business:</span> 347.878.1754
                 </p>
                 <p className="flex items-center text-gray-700">
-                  <span className="font-semibold mr-2">Address:</span> 36 NE 1st Street Suite 365, Miami, FL 33132
+                  <span className="font-semibold mr-2">Cell:</span> 929.250.6093
+                </p>
+                <p className="flex items-center text-gray-700">
+                  <span className="font-semibold mr-2">Address:</span> 37 Troutman St., New York, NY 11206
                 </p>
               </div>
               <SocialLinks />

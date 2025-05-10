@@ -69,26 +69,68 @@ export function Timeline() {
 
   return (
     <div className="relative">
-      <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
-      <div className="space-y-12">
+      {/* Center line - only visible on md screens and up */}
+      <div className="hidden md:block absolute left-1/2 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+
+      <div className="space-y-16">
         {events.map((yearEvents, index) => (
           <div key={index} className="relative">
-            <div className="flex items-center mb-4">
-              <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center">
-                <CalendarDays className="h-4 w-4 text-white" />
-              </div>
-              <div className="ml-16 md:ml-0 md:absolute md:left-1/2 md:ml-8">
-                <h3 className="text-xl font-bold">{yearEvents.year}</h3>
-              </div>
+            {/* Year marker in center - only visible on md screens and up */}
+            <div className="hidden md:flex absolute left-1/2 w-12 h-12 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center z-10">
+              <CalendarDays className="h-5 w-5 text-white" />
             </div>
-            <div className="ml-16 md:ml-0 md:grid md:grid-cols-2 md:gap-8">
-              <div className="md:text-right md:pr-8 md:col-start-1 md:col-end-2"></div>
-              <div className="space-y-2 md:pl-8">
-                {yearEvents.events.map((event, eventIndex) => (
-                  <div key={eventIndex} className="bg-white p-4 rounded-lg shadow border-l-4 border-primary">
-                    <p>{event}</p>
+
+            {/* Mobile year marker - only visible on small screens */}
+            <div className="md:hidden flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                <CalendarDays className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="text-xl font-bold ml-4">{yearEvents.year}</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Left side content (even indexes) */}
+              <div className={`${index % 2 === 0 ? "md:block" : "md:hidden"}`}>
+                <div className="flex flex-col items-end">
+                  <h3 className="hidden md:block text-xl font-bold mb-4 text-right">{yearEvents.year}</h3>
+                  <div className="space-y-3 w-full">
+                    {yearEvents.events.map((event, eventIndex) => (
+                      <div
+                        key={eventIndex}
+                        className="bg-white p-4 rounded-lg shadow border-r-4 border-primary text-right"
+                      >
+                        <p>{event}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+              </div>
+
+              {/* Right side content (odd indexes) */}
+              <div className={`${index % 2 === 1 ? "md:block" : "md:hidden"} md:col-start-2 md:col-end-3`}>
+                <div className="flex flex-col items-start">
+                  <h3 className="hidden md:block text-xl font-bold mb-4">{yearEvents.year}</h3>
+                  <div className="space-y-3 w-full">
+                    {yearEvents.events.map((event, eventIndex) => (
+                      <div key={eventIndex} className="bg-white p-4 rounded-lg shadow border-l-4 border-primary">
+                        <p>{event}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile view - always show content regardless of index */}
+              <div className="md:hidden col-span-1">
+                <div className="flex flex-col items-start">
+                  <div className="space-y-3 w-full">
+                    {yearEvents.events.map((event, eventIndex) => (
+                      <div key={eventIndex} className="bg-white p-4 rounded-lg shadow border-l-4 border-primary">
+                        <p>{event}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
